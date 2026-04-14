@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -23,10 +23,19 @@
         <h1 class="site-title">Smart Routine &amp; Product Advisor</h1>
       </header>
 
-      <!-- Category Filter -->
+      <!-- Filters -->
       <div class="search-section">
+        <label for="productSearch" class="visually-hidden"
+          >Search products</label
+        >
+        <input
+          id="productSearch"
+          type="search"
+          placeholder="Search by name, brand, category, or keyword"
+          autocomplete="off"
+        />
         <select id="categoryFilter">
-          <option value="" disabled selected>Choose a Category</option>
+          <option value="" selected>All Categories</option>
           <option value="cleanser">Cleansers</option>
           <option value="moisturizer">Moisturizers & Treatments</option>
           <option value="haircare">Haircare</option>
@@ -38,6 +47,29 @@
           <option value="fragrance">Fragrance</option>
         </select>
       </div>
+
+      <div class="direction-controls" aria-label="Layout direction controls">
+        <button
+          id="directionAutoBtn"
+          type="button"
+          class="direction-btn active"
+        >
+          Auto
+        </button>
+        <button id="directionLtrBtn" type="button" class="direction-btn">
+          LTR
+        </button>
+        <button id="directionRtlBtn" type="button" class="direction-btn">
+          RTL
+        </button>
+      </div>
+
+      <!-- Expanded Product Details -->
+      <section
+        id="featuredProductPanel"
+        class="featured-product-panel"
+        hidden
+      ></section>
 
       <!-- Products Grid -->
       <div id="productsContainer" class="products-grid"></div>
